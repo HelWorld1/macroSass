@@ -1,0 +1,61 @@
+$display: ('inline': 'in', 'inline-block': 'ib', 'block': 'b', 'inline-flex': 'if', 'flex': 'f', 'none': 'n')
+$width: ('25%': '25per', '50%': '50per', '75%': '75per', '100%': '100per', 'inherit': '-i', '-webkit-fill-available': '-webkitFill')
+$blockAlign: ('center': 'center', 'start': 'flex-start', 'end': 'flex-end')
+$textAlign: ('left', 'center', 'right')
+
+@each $name, $letter in $display
+	.d-#{$letter}
+		display: #{$name} !important
+@each $name, $value in $width
+	.w#{$value}
+		width: #{$name} !important
+	.max-w#{$value}
+		max-width: #{$name} !important
+.size-auto
+	width: auto
+	height: auto
+.flex-column
+	flex-direction: column !important
+.flex-row
+	flex-direction: row !important
+@each $name, $value in $blockAlign
+	.align-#{$name}
+		align-items: #{$value} !important
+	.justify-#{$name}
+		justify-content: #{$value} !important
+.justify-between
+	justify-content: space-between !important
+.justify-around
+	justify-content: space-around !important
+@each $name in $textAlign
+	.text-#{$name}
+		text-align: #{$name} !important
+.color-white
+	color: #fff !important
+.color-black
+	color: #000 !important
+.bg-n
+	background: none !important
+.border-n
+	border: none !important
+.bxz-bb
+	box-sizing: border-box !important
+.white-nowrap
+	white-space: nowrap !important
+.overflow-h
+	overflow: hidden !important
+.overflowY-s
+	overflow-y: scroll !important
+	overflow-x: hidden !important
+.brs25
+	border-radius: 25px !important
+.brs50
+	border-radius: 50px !important
+.va-m
+	vertical-align: middle !important
+.cu-p
+	cursor: pointer !important
+.cu-na
+	cursor: not-allowed !important
+.cu-d
+	cursor: default !important

@@ -1,0 +1,18 @@
+$sides: ('top': 't', 'bottom': 'b', 'left': 'l', 'right': 'r')
+
+@each $side, $letter in $sides
+	@for $px from 0 through 10
+		.m-#{$px * 5}
+			margin: #{$px * 5}px !important
+		.m#{$letter}-#{$px * 5}
+			margin-#{$side}:  #{$px * 5}px !important
+		.p-#{$px * 5}
+			padding:  #{$px * 5}px !important
+		.p#{$letter}-#{$px * 5}
+			padding-#{$side}:  #{$px * 5}px !important
+.m-a
+	margin: 0 auto !important
+.absolute-center
+	left: 50%
+	top: 50%
+	transform: translate3d(-50%, -50%, 0)
